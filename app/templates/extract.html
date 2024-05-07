@@ -1,4 +1,18 @@
-{%  extends "base.html" %}
+{% extends "base.html" %}
 {% block content %}
-    <p>This is extract filee</p>
+  {% if error is defined %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Error!</strong> {{error}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  {% endif %}
+  <form class="d-flex align-items-center gap-4" method="POST" action="{{url_for('extract')}}">
+    <p class="col-auto d-flex align-items-center">Product id: </p>
+    <div class="col-auto">
+      <input type="text" id="product_id" name="product_id" class="form-control" placeholder="Enter product id" required>
+    </div>
+    <div class="col-auto">
+      <button class="btn btn-outline-primary">Extract</button>
+    </div>
+  </form>
 {% endblock %}
