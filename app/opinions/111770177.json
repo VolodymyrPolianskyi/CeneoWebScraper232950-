@@ -1,0 +1,72 @@
+[
+    {
+        "opinion_id": "17022629",
+        "author": "k...n",
+        "recomendation": true,
+        "score": 1.0,
+        "content": {
+            "pl": "Gra zakupiona z zamiarem postawienia pierwszych kroków  w świecie gier, obycia z kontrolerem, więc wntej kwestii dobry zakup, dla dzieci które które mają już więcej doświadczenia starcz raczej 30 min zabawy.",
+            "en": "The game was purchased with the intention of taking the first steps in the world of games and getting familiar with the controller, so in this respect it is a good purchase, for children who already have more experience, 30 minutes of play is enough."
+        },
+        "pros": {
+            "pl": [
+                "grafika",
+                "grywalność",
+                "jakość"
+            ],
+            "en": [
+                "graphics",
+                "playability",
+                "quality"
+            ]
+        },
+        "cons": null,
+        "helpful": 3,
+        "unhelpful": 0,
+        "publish": "2023-01-16 20:35:37",
+        "purchase": "2023-01-03 13:19:08"
+    },
+    {
+        "opinion_id": "15678123",
+        "author": "f...a",
+        "recomendation": true,
+        "score": 1.0,
+        "content": {
+            "pl": "B fajna gra",
+            "en": "B nice game"
+        },
+        "pros": {
+            "pl": [
+                "grafika",
+                "grywalność",
+                "jakość"
+            ],
+            "en": [
+                "graphics",
+                "playability",
+                "quality"
+            ]
+        },
+        "cons": null,
+        "helpful": 3,
+        "unhelpful": 0,
+        "publish": "2022-02-09 13:32:35",
+        "purchase": "2022-01-27 20:11:08"
+    },
+    {
+        "opinion_id": "15449607",
+        "author": "Użytkownik Ceneo",
+        "recomendation": null,
+        "score": 0.9,
+        "content": {
+            "pl": "4,5/5",
+            "en": "4.5/5"
+        },
+        "pros": null,
+        "cons": null,
+        "helpful": 4,
+        "unhelpful": 4,
+        "publish": "2019-07-12 00:00:00",
+        "purchase": null
+    }
+]
