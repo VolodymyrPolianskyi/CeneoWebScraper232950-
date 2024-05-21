@@ -1,14 +1,16 @@
 from app import app
 from app import utils
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, send_file
 import requests
 from bs4 import BeautifulSoup
 import json
 import os
 import pandas as pd
+from io import BytesIO
 import numpy as np
 from matplotlib import pyplot as plt
 import matplotlib
+import xlsxwriter
 matplotlib.use('Agg')
 
 
@@ -60,7 +62,7 @@ def extract():
         opinions_count = opinions.index.size
         pros_count = opinions.pros.apply(lambda p: None if not p else p).count()
         cons_count = opinions.cons.apply(lambda p: None if not p else p).count()
-        avg_score = opinions.score.mean()
+        avg_score = round(opinions.score.mean(), 2)
         score_distribution = opinions.score.value_counts().reindex(np.arange(0, 5.5, 0.5), fill_value = 0)
         recommendation_distribution = opinions.recomendation.value_counts(dropna=False).reindex([True, False, np.nan], fill_value=0)
         product ={
@@ -122,3 +124,24 @@ def author():
 @app.route('/product/<product_id>')
 def product(product_id):
   return render_template("product.html", product_id=product_id)
+
+@app.route('/download/json/<product_id>')
+def download_json(product_id):
+
+  return send_file(f'opinions/{product_id}.json', mimetype='text/json', download_name = f'{product_id}.json', as_attachment = True)
+
+
+@app.route('/download/csv/<product_id>')
+def download_csv(product_id):
+  opinions = pd.read_json(f'app/opinions/{product_id}.json')
+  response_stream = BytesIO(opinions.to_csv().encode())
+  return send_file(response_stream, mimetype='text/csv', download_name = f'{product_id}.csv', as_attachment = True)
+
+@app.route('/download/xlsx/<product_id>')
+def download_xlsx(product_id):
+  opinions = pd.read_json(f'app/opinions/{product_id}.json')
+  buffer = BytesIO()
+  with pd.ExcelWriter(buffer, engine='xlsxwriter') as writer:
+    opinions.to_excel(writer)
+  buffer.seek(0)
+  return send_file(buffer, mimetype='application/vnd.ms-excel', download_name = f'{product_id}.xlsx', as_attachment = True)

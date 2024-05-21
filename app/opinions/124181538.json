@@ -1,0 +1,102 @@
+[
+    {
+        "opinion_id": "17673675",
+        "author": "d...a",
+        "recomendation": true,
+        "score": 1.0,
+        "content": {
+            "pl": "Zgodnie z oczekiwaniem. Pierwsze podkaszanie poszło sprawnie.",
+            "en": "As expected. The first trimming went smoothly."
+        },
+        "pros": {
+            "pl": [
+                "moc"
+            ],
+            "en": [
+                "power"
+            ]
+        },
+        "cons": null,
+        "helpful": 1,
+        "unhelpful": 0,
+        "publish": "2023-07-04 13:25:08",
+        "purchase": "2023-06-28 21:53:07"
+    },
+    {
+        "opinion_id": "17854404",
+        "author": "w...3",
+        "recomendation": null,
+        "score": 0.7,
+        "content": {
+            "pl": "Żyłka miała się wysuwać  SAMOCZYNNIE A SIĘ NIE WYSUWA [POZA TYM  OK.",
+            "en": "The line was supposed to slide out AUTOMATICALLY BUT IT DOESN'T SLIDE OUT [OTHERWISE OK."
+        },
+        "pros": {
+            "pl": [
+                "moc"
+            ],
+            "en": [
+                "power"
+            ]
+        },
+        "cons": null,
+        "helpful": 0,
+        "unhelpful": 0,
+        "publish": "2023-08-31 07:21:46",
+        "purchase": "2023-08-22 14:53:00"
+    },
+    {
+        "opinion_id": "17451692",
+        "author": "c...j",
+        "recomendation": true,
+        "score": 1.0,
+        "content": {
+            "pl": "Jeszcze nie sprawdziłem ale BOSCH to dobra firma",
+            "en": "I haven't checked it yet, but BOSCH is a good company"
+        },
+        "pros": {
+            "pl": [
+                "moc",
+                "trwałość",
+                "wyposażenie"
+            ],
+            "en": [
+                "power",
+                "durability",
+                "equipment"
+            ]
+        },
+        "cons": null,
+        "helpful": 2,
+        "unhelpful": 4,
+        "publish": "2023-04-27 12:12:49",
+        "purchase": "2023-04-22 21:37:21"
+    },
+    {
+        "opinion_id": "17503187",
+        "author": "k...k",
+        "recomendation": true,
+        "score": 1.0,
+        "content": {
+            "pl": "Jestem bardzo zadowolona. Trawa super skoszona.",
+            "en": "I am very pleased. The grass is perfectly mowed."
+        },
+        "pros": {
+            "pl": [
+                "moc",
+                "trwałość",
+                "wyposażenie"
+            ],
+            "en": [
+                "power",
+                "durability",
+                "equipment"
+            ]
+        },
+        "cons": null,
+        "helpful": 0,
+        "unhelpful": 0,
+        "publish": "2023-05-12 21:30:05",
+        "purchase": "2023-04-23 10:58:09"
+    }
+]
