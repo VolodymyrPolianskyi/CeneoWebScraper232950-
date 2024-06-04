@@ -2,22 +2,22 @@
 {% block content %}
   <div class="products_handler">
   {% for product in products %}
-  <div class="card w-100" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title"><a href="{{url_for('product', product_id = product.product_id)}}" class="card-link">{{product.product_name}}</a></h5>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Number of opinions: {{product.opinions_count}}</li>
-        <li class="list-group-item">Number of opinions with disadvantages: {{product.cons_count}}</li>
-        <li class="list-group-item">Number of opinions with advantages: {{product.pros_count}}</li>
-        <li class="list-group-item">Average score: {{product.avg_score}}</li>
-      </ul>
-      <div class="button-download_wrapper">
-        <a href="{{url_for('download_csv', product_id = product.product_id)}}" class="btn btn-outline-success btn-download">CSV</a>
-        <a href="{{url_for('download_xlsx', product_id = product.product_id)}}" class="btn btn-outline-success btn-download">XLSX</a>
-        <a href="{{url_for('download_json', product_id = product.product_id)}}" class="btn btn-outline-success btn-download">JSON</a>
+    <div class="card w-100" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><a href="{{url_for('product', product_id = product.product_id)}}" class="card-link">{{product.product_name}}</a></h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Number of opinions: {{product.opinions_count}}</li>
+          <li class="list-group-item">Number of opinions with disadvantages: {{product.cons_count}}</li>
+          <li class="list-group-item">Number of opinions with advantages: {{product.pros_count}}</li>
+          <li class="list-group-item">Average score: {{product.avg_score}}</li>
+        </ul>
+        <div class="button-download_wrapper">
+          <a href="{{url_for('download_csv', product_id = product.product_id)}}" class="btn btn-outline-success btn-download">CSV</a>
+          <a href="{{url_for('download_xlsx', product_id = product.product_id)}}" class="btn btn-outline-success btn-download">XLSX</a>
+          <a href="{{url_for('download_json', product_id = product.product_id)}}" class="btn btn-outline-success btn-download">JSON</a>
+        </div>
       </div>
     </div>
-  </div>
   {% endfor %}
   </div>
 {% endblock %}

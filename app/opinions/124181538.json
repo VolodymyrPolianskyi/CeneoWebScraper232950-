@@ -1,5 +1,30 @@
 [
     {
+        "opinion_id": "18686584",
+        "author": "a...t",
+        "recomendation": true,
+        "score": 1.0,
+        "content": {
+            "pl": "Jakość wykonania ogólnie dość przyzwoita, moc silnika wystarczająca. Doczepić by się można tylko do bezsensownego łączenia tej rurki; i to w dwóch miejscach. Powoduje to kiwanie się dołu podkaszarki podczas pracy.",
+            "en": "The build quality is generally quite decent, the engine power is sufficient. One could only complain about the pointless connection of this tube; and in two places. This causes the bottom of the trimmer to swing during operation."
+        },
+        "pros": {
+            "pl": [
+                "moc",
+                "trwałość"
+            ],
+            "en": [
+                "power",
+                "durability"
+            ]
+        },
+        "cons": null,
+        "helpful": 0,
+        "unhelpful": 0,
+        "publish": "2024-05-30 13:17:07",
+        "purchase": "2024-04-29 13:14:44"
+    },
+    {
         "opinion_id": "17673675",
         "author": "d...a",
         "recomendation": true,
@@ -68,7 +93,7 @@
         },
         "cons": null,
         "helpful": 2,
-        "unhelpful": 4,
+        "unhelpful": 5,
         "publish": "2023-04-27 12:12:49",
         "purchase": "2023-04-22 21:37:21"
     },

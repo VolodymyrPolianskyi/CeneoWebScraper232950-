@@ -1,4 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
   <div class="card">This is {{product_id}} file</div>
+  <div class="button-download_wrapper">
+    <a href="{{url_for('download_csv', product_id = product_id)}}" class="btn btn-outline-success btn-download">CSV</a>
+    <a href="{{url_for('download_xlsx', product_id = product_id)}}" class="btn btn-outline-success btn-download">XLSX</a>
+    <a href="{{url_for('download_json', product_id = product_id)}}" class="btn btn-outline-success btn-download">JSON</a>
+  </div>
+  <a type="button" class="btn btn-outline-dark" href="{{url_for('charts', product_id = product_id)}}">Charts</a>
+  {{opinions|safe}}
+{% endblock %}
+{% block scripts %}
+<script>
+  let table = new DataTable('#opinions', {
+    responsive: true
+  })
+</script>
 {% endblock %}
