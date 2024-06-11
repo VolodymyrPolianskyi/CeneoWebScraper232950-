@@ -22,7 +22,7 @@
         },
         "cons": null,
         "helpful": 3,
-        "unhelpful": 0,
+        "unhelpful": 1,
         "publish": "2023-01-16 20:35:37",
         "purchase": "2023-01-03 13:19:08"
     },
@@ -48,7 +48,7 @@
             ]
         },
         "cons": null,
-        "helpful": 3,
+        "helpful": 4,
         "unhelpful": 1,
         "publish": "2022-02-09 13:32:35",
         "purchase": "2022-01-27 20:11:08"
@@ -64,8 +64,8 @@
         },
         "pros": null,
         "cons": null,
-        "helpful": 4,
-        "unhelpful": 4,
+        "helpful": 5,
+        "unhelpful": 5,
         "publish": "2019-07-12 00:00:00",
         "purchase": null
     }

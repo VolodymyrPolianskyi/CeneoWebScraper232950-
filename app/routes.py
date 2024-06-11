@@ -80,25 +80,30 @@ def extract():
         jf = open(f'app/products/{product_id}.json' , 'w' , encoding='UTF-8')
         json.dump(product, jf, indent=4, ensure_ascii=False)
         jf.close()
-        if not os.path.exists('app/charts'):
-          os.mkdir('app/charts')
+        if not os.path.exists('app/static'):
+          os.mkdir('app/static')
+        if not os.path.exists('app/static/charts'):
+          os.mkdir('app/static/charts')
         fig, ax = plt.subplots()
-        score_distribution.plot.bar(color='green')
+        score_distribution.plot.bar(color='green', ax=ax)
         plt.xlabel('Number of stars')
         plt.ylabel('Number of opinions')
-        plt.title(f"Score history for {product_id}")
-        plt.xticks(rotation = 0)
-        ax.bar_label(ax.containers[0], label_type='edge', fmt= lambda l: int(l) if l else '')
-        plt.savefig(f'app/charts/{product_id}_score.png')
-        recommendation_distribution = opinions.recomendation.value_counts(dropna=False).reindex([True, False, np.nan], fill_value=0)
+        plt.title(f"Score history for {product_name}")
+        plt.xticks(rotation=0)
+        ax.bar_label(ax.containers[0], label_type='edge', fmt=lambda l: f'{int(l)}' if l else '')
+        plt.savefig(f'app/static/charts/{product_id}_score.png')
+        plt.close(fig)
+
+        fig, ax = plt.subplots()
         recommendation_distribution.plot.pie(
-            labels = ['Recommend', 'Not recommend','No info'],
-            label ='',
-            colors = ['forestgreen', 'crimson', 'silver'],
-            autopct = lambda l: '{:1.1f}%'.format(1) if l else ''
-            )
+            labels=['Recommend', 'Not recommend', 'No info'],
+            label='',
+            colors=['forestgreen', 'crimson', 'silver'],
+            autopct=lambda p: '{:.1f}%'.format(p) if p > 0 else ''
+        )
         plt.title(f'Recommendations shares for {product_name}')
-        plt.savefig(f'app/charts/{product_id}_recommendation.png')
+        plt.savefig(f'app/static/charts/{product_id}_recommendation.png')
+        plt.close(fig)
         return redirect(url_for('product', product_id=product_id))
       return render_template('extract.html', error = 'Product have no opinions')
     return render_template('extract.html', error = "Product doesn't exist")
